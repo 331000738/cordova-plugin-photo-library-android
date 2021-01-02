@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-photo-library-android" version="2.2.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Photo Library</name>
+
+    <engines>
+      <engine name="cordova-ios" version=">=4.5.1" />
+    </engines>
+
+    <js-module src="www/PhotoLibrary.js" name="PhotoLibrary">
+        <clobbers target="cordova.plugins.photoLibrary" />
+    </js-module>
+    <js-module src="www/async/dist/async.min.js" name="async" />
+    <js-module src="www/async/dist/async.min.map" name="async_map" />
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PhotoLibrary" >
+                <param name="android-package" value="com.terikon.cordova.photolibrary.PhotoLibrary"/>
+                <param name="onload" value="true" />
+            </feature>
+            <allow-navigation href="cdvphotolibrary:*" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+        </config-file>
+        <source-file src="src/android/PhotoLibrary.java" target-dir="src/com/terikon/cordova/photolibrary" />
+        <source-file src="src/android/PhotoLibraryService.java" target-dir="src/com/terikon/cordova/photolibrary" />
+        <source-file src="src/android/PhotoLibraryGetLibraryOptions.java" target-dir="src/com/terikon/cordova/photolibrary" />
+    </platform>
+    <dependency id="cordova-plugin-file" version="^6.0.1"/>
+</plugin>
