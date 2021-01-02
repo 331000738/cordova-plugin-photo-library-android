@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-photo-library-android",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Plugin that just gets photos from the gallery",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,18 @@
     "url": "https://github.com/terikon/cordova-plugin-photo-library-android/issues"
   },
   "homepage": "https://github.com/terikon/cordova-plugin-photo-library-android#readme",
+  "cordova": {
+    "id": "cordova-plugin-photo-library-android",
+    "platforms": [
+      "android"
+    ]
+  },
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=5.0.1"
+    }
+  ],
   "devDependencies": {
     "eslint": "^6.6.0",
     "@types/cordova": "^0.0.34",
