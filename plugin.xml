@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-photo-library-android" version="2.2.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-photo-library-android" version="2.2.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Photo Library</name>
 
     <engines>
-      <engine name="cordova-ios" version=">=4.5.1" />
+      <engine name="cordova-android" version=">=4.5.1" />
     </engines>
 
     <js-module src="www/PhotoLibrary.js" name="PhotoLibrary">
